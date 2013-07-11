@@ -1,0 +1,28 @@
+@import "bourbon/bourbon";
+// $visual-grid: true;
+// $visual-grid-color: grey;
+// $visual-grid-index: front;
+// $visual-grid-opacity: 0.1;
+@import "neat/neat";
+
+$section-padding: 20px;
+
+nav {
+  padding: $section-padding;
+}
+
+#container {
+  @include outer-container;
+}
+table {
+  width: 100%;
+  // text-align: center;
+  // border:1px #000 solid;
+}
+th, td {
+  @include span-columns( 2 );
+}
+
+#logo {
+  width: 150px;
+}
