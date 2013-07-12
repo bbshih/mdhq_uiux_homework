@@ -3,7 +3,6 @@ $(function() {
   var maxHeight = 0;
 
   var row = $("#numbers");
-  var graph = $("#graph");
 
   $.each(row, function(){
       var height = jQuery(this).height();
@@ -11,14 +10,15 @@ $(function() {
           maxHeight = height;
 
   });
-  graph.height(maxHeight);
+  $("#graph").height(maxHeight);
+  $("#placeholder").height($(".big-number").height());
 
   var visits = [], clickthroughs = [],
   rawVisits = [300,295,292,275,267,268,256,259,277,426,522,516,425,344,305,291,283,285],
-  rawClickthroughs = [40,33,35,32,25,26,26,26,23,59,92,76,49,37,36,29,38,32];
+  rawClickthroughs = [40,33,35,32,25,26,26,26,23,59,92,76,49,37,36,29,38,32],
   rawDates=["1/1/13","1/2/13","1/3/13","1/4/13","1/5/13","1/6/13","1/7/13","1/8/13","1/9/13","1/10/13","1/11/13","1/12/13","1/13/13","1/14/13","1/15/13","1/16/13","1/17/13","1/18/13"]
 
-  for (var i = 0; i < rawDates.length - 1 ; i += 1) {
+  for (var i = 0; i < rawDates.length ; i += 1) {
     str = rawDates[i];
     date = new Date(Date.parse(str.replace(/-/g, " ")));
     // date += (8 *  60);
@@ -34,30 +34,36 @@ $(function() {
     series: {
       lines: {
         show: true
-      },
-      points: {
-        show: true
       }
     },
     grid: {
       hoverable: true,
-      clickable: true
+      clickable: true,
+      borderWidth: {
+        top: 0,
+        bottom: 1,
+        left: 1,
+        right: 0
+      }
     },
     yaxis: {
       min: 0,
-      max: 600
+      max: 600,
+      color: "#ffffff"
     },
     xaxis: {
         mode: "time",
         timezone: "browser",
         timeformat: "%m/%d/%y",
-        minTickSize: [1, "day"]
+        minTickSize: [1, "day"],
+        color: "#ffffff"
     },
     legend: {
         show: false
-    }
+    },
+    colors: ["#efb669", "#5d9da1"]
   });
-
+  
   function showTooltip(x, y, contents) {
     $("<div id='tooltip'>" + contents + "</div>").css({
       position: "absolute",

@@ -5,12 +5,12 @@
 // $visual-grid-opacity: 0.1;
 @import "neat/neat";
 
-$section-padding: 20px;
-
 $peach: #e6ddcb;
 $orange: #efb669;
 $gray: #666666;
-$brightBlue:#3b68aa;
+$bright-blue:#3b68aa;
+$dark-blue:#395885;
+$teal: #5d9da1;
 $white: #ffffff;
 
 body {
@@ -31,46 +31,63 @@ nav {
   img {
     height: 100%;
   }
+
+  ul,li {
+    display:inline-block;
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+  a:link, a:visited {
+      text-decoration: none;
+  }
+}
+
+a:link, a:visited {
+    color: $dark-blue;
 }
 
 #container {
   @include outer-container;
+  @include pad( 20px default );
   background-color: $white;
-  padding: 20px;
+}
+
+header {
+  h1 {
+    float: left;
+  }
+  .downloads {
+    float: right;
+  }
 }
 
 #first-row {
   @include row();
+  clear: both;
 }
 
 #numbers {
-  @include span-columns( 3 );
+  @include span-columns( 6 );
   // border: 1px $gray solid;
 
 }
 
 .big-number {
-  padding: 25px 0;
+  @include span-columns( 3 of 6 );
   text-align: center;
 
-  border: 1px $gray solid;
-
   h2 {
-    color: $orange;
     font-size: 5em;
     margin: 0;
   }
 
   p {
     margin: 0;
-    // font-weight: bold;
     font-size: 1em;
   }
-
 }
 
 .small-numbers {
-  // border: 1px #000 solid;
   margin: 0;
 
   th, td {
@@ -84,19 +101,25 @@ nav {
     // width: 30px;
   }
   td {
-    color: $orange;
     font-weight: bold;
     font-size: 2em;
   }
 }
 
+.visits {
+  color: $orange;
+}
+
+.clickthroughs {
+  color: $teal;
+}
+
 #graph {
-  @include span-columns( 9 );
-  height: 586px;
+  @include span-columns( 6 );
 }
 
 #placeholder {
-  height: 100%;
+  height: 359px;
 }
 
 table {

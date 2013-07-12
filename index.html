@@ -13,19 +13,26 @@
 <body>
   <nav>
     <img src="images/textlogo.png" alt="MobileDevHQ Logo"> 
-    <a href="#">Dashboard</a>
-    <a href="#">Sonar</a>
-    <a href="#">Add App</a>
-    <a href="#">Blog</a>
-    <a href="#">Help</a>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Sonar</a></li>
+      <li><a href="#">Add App</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
   </nav>
 
   <div id="container">
-    <h1>Dashboard</h1>
+    <header>
+      <h1>Dashboard</h1>
+      <div class="downloads">
+        Download: <a href="homework_dataset.csv">CSV</a>
+      </div>
+    </header>
     <div id="first-row">
-      <h2>Today's Numbers</h2>
       <section id="numbers">
-        <div class="big-number">
+        <h2>Today's Numbers</h2>
+        <div class="big-number visits">
           <p>Visits</p>
           <h2>285</h2>
           <table class="small-numbers">
@@ -43,7 +50,7 @@
             </tr>
           </table>
         </div>
-        <div class="big-number">
+        <div class="big-number clickthroughs">
           <p>Clickthroughs</p>
           <h2>32</h2>
           <table class="small-numbers">
@@ -63,6 +70,7 @@
         </div>
       </section>
       <section id="graph">
+        <h2>Visits and Clickthroughs Over Time</h2>
         <div id="placeholder">
         </div>
       </section>

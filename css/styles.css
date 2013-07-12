@@ -18,23 +18,38 @@ nav {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); }
   nav img {
     height: 100%; }
+  nav ul, nav li {
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: middle; }
+  nav a:link, nav a:visited {
+    text-decoration: none; }
+
+a:link, a:visited {
+  color: #395885; }
 
 #container {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  padding: 20px; }
+  padding: 20px 2.35765%;
+  background-color: white; }
   #container:before, #container:after {
     content: " ";
     display: table; }
   #container:after {
     clear: both; }
 
+header h1 {
+  float: left; }
+header .downloads {
+  float: right; }
+
 #first-row {
   *zoom: 1;
-  display: block; }
+  display: block;
+  clear: both; }
   #first-row:before, #first-row:after {
     content: " ";
     display: table; }
@@ -45,16 +60,19 @@ nav {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 23.23176%; }
+  width: 48.82117%; }
   #numbers:last-child {
     margin-right: 0; }
 
 .big-number {
-  padding: 25px 0;
-  text-align: center;
-  border: 1px #666666 solid; }
+  display: block;
+  float: left;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+  text-align: center; }
+  .big-number:last-child {
+    margin-right: 0; }
   .big-number h2 {
-    color: #efb669;
     font-size: 5em;
     margin: 0; }
   .big-number p {
@@ -70,21 +88,25 @@ nav {
     font-weight: normal;
     text-align: right; }
   .small-numbers td {
-    color: #efb669;
     font-weight: bold;
     font-size: 2em; }
+
+.visits {
+  color: #efb669; }
+
+.clickthroughs {
+  color: #5d9da1; }
 
 #graph {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 74.41059%;
-  height: 586px; }
+  width: 48.82117%; }
   #graph:last-child {
     margin-right: 0; }
 
 #placeholder {
-  height: 100%; }
+  height: 359px; }
 
 table {
   width: 100%;
