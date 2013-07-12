@@ -3,30 +3,106 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666666;
+  background-color: #666666;
+  margin: 0; }
+
 nav {
-  padding: 20px; }
+  top: 0;
+  padding: 10px 20px;
+  position: relative;
+  height: 50px;
+  background-color: white;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); }
+  nav img {
+    height: 100%; }
 
 #container {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-color: white;
+  padding: 20px; }
   #container:before, #container:after {
     content: " ";
     display: table; }
   #container:after {
     clear: both; }
 
-table {
-  width: 100%; }
+#first-row {
+  *zoom: 1;
+  display: block; }
+  #first-row:before, #first-row:after {
+    content: " ";
+    display: table; }
+  #first-row:after {
+    clear: both; }
 
-th, td {
+#numbers {
   display: block;
   float: left;
   margin-right: 2.35765%;
-  width: 14.70196%; }
-  th:last-child, td:last-child {
+  width: 23.23176%; }
+  #numbers:last-child {
     margin-right: 0; }
 
-#logo {
-  width: 150px; }
+.big-number {
+  padding: 25px 0;
+  text-align: center;
+  border: 1px #666666 solid; }
+  .big-number h2 {
+    color: #efb669;
+    font-size: 5em;
+    margin: 0; }
+  .big-number p {
+    margin: 0;
+    font-size: 1em; }
+
+.small-numbers {
+  margin: 0; }
+  .small-numbers th, .small-numbers td {
+    padding: 0px; }
+  .small-numbers th {
+    width: 50%;
+    font-weight: normal;
+    text-align: right; }
+  .small-numbers td {
+    color: #efb669;
+    font-weight: bold;
+    font-size: 2em; }
+
+#graph {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  height: 586px; }
+  #graph:last-child {
+    margin-right: 0; }
+
+#placeholder {
+  height: 100%; }
+
+table {
+  width: 100%;
+  text-align: center; }
+
+.table {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  border: 1px #000 solid; }
+  .table:last-child {
+    margin-right: 0; }
+  .table th, .table td {
+    display: block;
+    float: left;
+    margin-right: 2.84259%;
+    width: 17.72593%;
+    padding: 5px; }
+    .table th:last-child, .table td:last-child {
+      margin-right: 0; }

@@ -5,43 +5,103 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/gallery-2013.03.27-22-06/build/gallerycss-csstable/gallerycss-csstable-min.css">
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.flot.js"></script>
+  <script type="text/javascript" src="js/jquery.flot.time.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/list.min.js"></script>
 </head>
 <body>
   <nav>
-    <img id="logo" src="images/logo.png" alt="MobileDevHQ Logo"> 
+    <img src="images/textlogo.png" alt="MobileDevHQ Logo"> 
     <a href="#">Dashboard</a>
     <a href="#">Sonar</a>
     <a href="#">Add App</a>
     <a href="#">Blog</a>
     <a href="#">Help</a>
   </nav>
+
   <div id="container">
+    <h1>Dashboard</h1>
+    <div id="first-row">
+      <h2>Today's Numbers</h2>
+      <section id="numbers">
+        <div class="big-number">
+          <p>Visits</p>
+          <h2>285</h2>
+          <table class="small-numbers">
+            <tr>
+               <th scope="row">Search</th>
+               <td>119</td>
+            </tr>
+            <tr>
+               <th scope="row">Social</th>
+               <td>106</td>
+            </tr>
+            <tr>
+               <th scope="row">Earned Media</th>
+               <td>60</td>
+            </tr>
+          </table>
+        </div>
+        <div class="big-number">
+          <p>Clickthroughs</p>
+          <h2>32</h2>
+          <table class="small-numbers">
+            <tr>
+               <th scope="row">Search</th>
+               <td>16</td>
+            </tr>
+            <tr>
+               <th scope="row">Social</th>
+               <td>10</td>
+            </tr>
+            <tr>
+               <th scope="row">Earned Media</th>
+               <td>6</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section id="graph">
+        <div id="placeholder">
+        </div>
+      </section>
+    </div>
+
     
-    <table class="yui3-table yui3-table-bordered">
-        <tr>
-            <th scope="col">Referrer</th>
-            <th scope="col">All</th>
-            <th scope="col">Search</th>
-            <th scope="col">Social</th>
-            <th scope="col">Earned Media</th>
-        </tr>
-        <tr>
-           <th scope="row">Visits</th>
-           <td>100</td>
-           <td>80</td>
-           <td>10</td>
-           <td>10</td>
-        </tr>
-        <tr>
-            <th scope="row">Clicks</th>
-            <td>50</td>
-            <td>45</td>
-            <td>3</td>
-            <td>1</td>
-        </tr>
-    </table>
+
+ <!--    <div class="table">
+      <table>
+          <tr>
+              <th scope="col" class="first-column">Referrer</th>
+              <th scope="col">All</th>
+              <th scope="col">Search</th>
+              <th scope="col">Social</th>
+              <th scope="col">Earned Media</th>
+          </tr>
+          <tr>
+             <th scope="row" class="first-column">Visits</th>
+             <td>285</td>
+             <td>119</td>
+             <td>106</td>
+             <td>60</td>
+          </tr>
+          <tr>
+              <th scope="row" class="first-column">Clicks</th>
+              <td>32</td>
+              <td>16</td>
+              <td>10</td>
+              <td>6</td>
+          </tr>
+          <tr>
+              <th scope="row" class="first-column">CTR</th>
+              <td>11.2%</td>
+              <td>13.4%</td>
+              <td>9.4%</td>
+              <td>10.0%</td>
+          </tr>
+      </table>
+    </div> -->
   </div>
 
 
