@@ -9,6 +9,9 @@ body {
   background-color: #666666;
   margin: 0; }
 
+h2 {
+  font-size: 1.25em; }
+
 nav {
   top: 0;
   padding: 10px 20px;
@@ -33,27 +36,30 @@ a:link, a:visited {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 2.35765%;
   background-color: white; }
   #container:before, #container:after {
     content: " ";
     display: table; }
   #container:after {
     clear: both; }
+  #container p {
+    font-size: .75em; }
 
 header h1 {
-  float: left; }
-header .downloads {
+  float: left;
+  margin: 0; }
+header div.downloads {
   float: right; }
 
-#first-row {
+div.row {
   *zoom: 1;
   display: block;
-  clear: both; }
-  #first-row:before, #first-row:after {
+  clear: both;
+  margin-bottom: 20px; }
+  div.row:before, div.row:after {
     content: " ";
     display: table; }
-  #first-row:after {
+  div.row:after {
     clear: both; }
 
 #numbers {
@@ -64,32 +70,54 @@ header .downloads {
   #numbers:last-child {
     margin-right: 0; }
 
-.big-number {
+#first-big-number {
+  margin-left: 17.05961%; }
+
+div.big-number {
   display: block;
   float: left;
   margin-right: 4.82916%;
-  width: 47.58542%;
+  width: 30.11389%;
   text-align: center; }
-  .big-number:last-child {
+  div.big-number:last-child {
     margin-right: 0; }
-  .big-number h2 {
+  div.big-number h2 {
     font-size: 5em;
     margin: 0; }
-  .big-number p {
-    margin: 0;
-    font-size: 1em; }
 
-.small-numbers {
-  margin: 0; }
-  .small-numbers th, .small-numbers td {
-    padding: 0px; }
-  .small-numbers th {
-    width: 50%;
+section.small-nums {
+  display: block;
+  float: left;
+  margin-right: 4.82916%;
+  width: 100%; }
+  section.small-nums:last-child {
+    margin-right: 0; }
+  section.small-nums .titleCol {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 12.64237%;
     font-weight: normal;
-    text-align: right; }
-  .small-numbers td {
+    text-align: left;
+    vertical-align: middle;
+    text-align: middle;
+    padding: .5em; }
+    section.small-nums .titleCol:last-child {
+      margin-right: 0; }
+  section.small-nums .col {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 30.11389%;
     font-weight: bold;
-    font-size: 2em; }
+    font-size: 2em;
+    text-align: right;
+    vertical-align: middle; }
+    section.small-nums .col:last-child {
+      margin-right: 0; }
+
+.clickthrough-row {
+  margin-left: 34.94305%; }
 
 .visits {
   color: #efb669; }
@@ -97,34 +125,43 @@ header .downloads {
 .clickthroughs {
   color: #5d9da1; }
 
-#graph {
+#alerts {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 0 2.35765%;
+  border-radius: 5px;
+  background-color: #e6ddcb; }
+  #alerts:last-child {
+    margin-right: 0; }
+  #alerts p {
+    margin-top: 0; }
+
+#total-graph, #ctr-graph {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 48.82117%; }
-  #graph:last-child {
+  #total-graph:last-child, #ctr-graph:last-child {
     margin-right: 0; }
 
 #placeholder {
   height: 359px; }
 
-table {
-  width: 100%;
-  text-align: center; }
-
-.table {
+div.table {
   display: block;
   float: left;
   margin-right: 2.35765%;
   width: 82.94039%;
   border: 1px #000 solid; }
-  .table:last-child {
+  div.table:last-child {
     margin-right: 0; }
-  .table th, .table td {
+  div.table th, div.table td {
     display: block;
     float: left;
     margin-right: 2.84259%;
     width: 17.72593%;
     padding: 5px; }
-    .table th:last-child, .table td:last-child {
+    div.table th:last-child, div.table td:last-child {
       margin-right: 0; }

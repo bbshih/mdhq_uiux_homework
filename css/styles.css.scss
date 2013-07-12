@@ -3,6 +3,8 @@
 // $visual-grid-color: grey;
 // $visual-grid-index: front;
 // $visual-grid-opacity: 0.1;
+
+
 @import "neat/neat";
 
 $peach: #e6ddcb;
@@ -18,6 +20,10 @@ body {
   color: $gray;
   background-color: $gray;
   margin: 0;
+}
+
+h2 {
+  font-size: 1.25em;
 }
 
 nav {
@@ -48,62 +54,71 @@ a:link, a:visited {
 
 #container {
   @include outer-container;
-  @include pad( 20px default );
+  // @include pad( 20px default );
   background-color: $white;
+  p {
+    font-size: .75em;
+  }
 }
 
 header {
   h1 {
     float: left;
+    margin: 0;
   }
-  .downloads {
+  div.downloads {
     float: right;
   }
 }
 
-#first-row {
+div.row {
   @include row();
   clear: both;
+  margin-bottom: 20px;
 }
 
 #numbers {
   @include span-columns( 6 );
-  // border: 1px $gray solid;
 
 }
 
-.big-number {
-  @include span-columns( 3 of 6 );
+#first-big-number {
+  @include shift(2);
+}
+
+div.big-number {
+  @include span-columns( 2 of 6 );
   text-align: center;
 
   h2 {
     font-size: 5em;
     margin: 0;
   }
+}
 
-  p {
-    margin: 0;
-    font-size: 1em;
+section.small-nums {
+  @include span-columns( 6 of 6 );
+
+  .titleCol {
+    @include span-columns (1 of 6);
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+    text-align:middle;
+    padding: .5em;
+  }
+  .col {
+    @include span-columns (2 of 6);
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+    vertical-align: middle;
+
   }
 }
 
-.small-numbers {
-  margin: 0;
-
-  th, td {
-    padding: 0px;
-  }
-
-  th {
-    width: 50%;
-    font-weight: normal;
-    text-align: right;
-    // width: 30px;
-  }
-  td {
-    font-weight: bold;
-    font-size: 2em;
-  }
+.clickthrough-row {
+  @include shift(2);
 }
 
 .visits {
@@ -114,7 +129,17 @@ header {
   color: $teal;
 }
 
-#graph {
+#alerts {
+  @include span-columns( 12 );
+  @include pad( 0 default );
+  border-radius: 5px;
+  background-color: $peach;
+  p {
+    margin-top: 0;
+  }
+}
+
+#total-graph, #ctr-graph {
   @include span-columns( 6 );
 }
 
@@ -122,13 +147,7 @@ header {
   height: 359px;
 }
 
-table {
-  width:100%;
-  text-align: center;
-  
-}
-
-.table {
+div.table {
   @include span-columns( 10 );
   border:1px #000 solid;
   th, td {
@@ -136,4 +155,5 @@ table {
     padding: 5px;
   }
 }
+
 

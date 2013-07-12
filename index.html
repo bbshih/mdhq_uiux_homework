@@ -3,16 +3,19 @@
 <head>
   <title>MobileDevHQ Landing Page Performance</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/gallery-2013.03.27-22-06/build/gallerycss-csstable/gallerycss-csstable-min.css">
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery.flot.js"></script>
   <script type="text/javascript" src="js/jquery.flot.time.js"></script>
+  <script type="text/javascript" src="js/jquery.peity.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+
 </head>
 <body>
   <nav>
-    <img src="images/textlogo.png" alt="MobileDevHQ Logo"> 
+    <img src="images/textlogo.png" title="logo" alt="MobileDevHQ Logo"> 
     <ul>
       <li><a href="#">Dashboard</a></li>
       <li><a href="#">Sonar</a></li>
@@ -29,87 +32,69 @@
         Download: <a href="homework_dataset.csv">CSV</a>
       </div>
     </header>
-    <div id="first-row">
+    <div class="row">
       <section id="numbers">
         <h2>Today's Numbers</h2>
-        <div class="big-number visits">
-          <p>Visits</p>
+        <div id="first-big-number" class="big-number visits">
+          Visits
           <h2>285</h2>
-          <table class="small-numbers">
-            <tr>
-               <th scope="row">Search</th>
-               <td>119</td>
-            </tr>
-            <tr>
-               <th scope="row">Social</th>
-               <td>106</td>
-            </tr>
-            <tr>
-               <th scope="row">Earned Media</th>
-               <td>60</td>
-            </tr>
-          </table>
         </div>
         <div class="big-number clickthroughs">
-          <p>Clickthroughs</p>
+          Clickthroughs
           <h2>32</h2>
-          <table class="small-numbers">
-            <tr>
-               <th scope="row">Search</th>
-               <td>16</td>
-            </tr>
-            <tr>
-               <th scope="row">Social</th>
-               <td>10</td>
-            </tr>
-            <tr>
-               <th scope="row">Earned Media</th>
-               <td>6</td>
-            </tr>
-          </table>
+        </div>
+
+        <section class="small-nums">
+          <span class="titleCol">Search</span>
+          <span class="col visits" title="Today's visits and sparkline of past 18 days">119 <span class="line" >100,110,106,101,104,110,112,120,125,123,126,135,122,111,114,109,115,119</span></span>
+          <span class="col clickthroughs" title="Today's clickthroughs and sparkline of past 18 days">16 <span class="line">11,9,10,12,10,11,12,12,14,9,21,18,12,11,13,11,18,16</span></span>
+        </section>
+        <section class="small-nums">
+          <span class="titleCol">Social</span>
+          <span class="col visits" title="Today's visits and sparkline of past 18 days">106 <span class="line">100,95,101,98,99,108,98,95,107,103,142,187,164,134,103,104,103,106</span></span>
+          <span class="col clickthroughs" title="Today's clickthroughs and sparkline of past 18 days">10 <span class="line">9,9,10,8,9,10,6,9,5,10,25,19,16,14,10,9,12,10</span></span>
+        </section>
+        <section class="small-nums">
+          <span class="titleCol">Earned Media</span>
+          <span class="col visits" title="Today's visits and sparkline of past 18 days">60 <span class="line">100,90,85,76,64,50,46,44,45,200,254,194,139,99,88,78,65,60</span></span>
+          <span class="col clickthroughs" title="Today's clickthroughs and sparkline of past 18 days">6 <span class="line">20,15,15,12,6,5,8,5,4,40,46,39,21,12,13,9,8,6</span></span>
+        </section>
+      </section>
+      <section id="total-graph">
+        <h2>Total Visits and Clickthroughs Over Time</h2>
+        <div id="visits-clicks">
         </div>
       </section>
-      <section id="graph">
-        <h2>Visits and Clickthroughs Over Time</h2>
-        <div id="placeholder">
-        </div>
-      </section>
+     
     </div>
 
-    
+    <section id="alerts">
+      <h2>You might want to look at this</h2>
+        <div class="date">Jan 18</div>
+        <p><a href="#">Earned Media traffic CTR dropped 4 days consecutively</a></p>
+        <div class="date">Jan 11</div>
+        <p>
+          <a href="#">Peak traffic of the past 2 weeks</a> <br>
+          <a href="#">Peak conversion rate of the past 2 weeks</a>
+        </p>
+      <div class="date">Jan 10</div>
+      <p><a href="#">Large spike in Earned Media traffic</a></p>
+    </section>
 
- <!--    <div class="table">
-      <table>
-          <tr>
-              <th scope="col" class="first-column">Referrer</th>
-              <th scope="col">All</th>
-              <th scope="col">Search</th>
-              <th scope="col">Social</th>
-              <th scope="col">Earned Media</th>
-          </tr>
-          <tr>
-             <th scope="row" class="first-column">Visits</th>
-             <td>285</td>
-             <td>119</td>
-             <td>106</td>
-             <td>60</td>
-          </tr>
-          <tr>
-              <th scope="row" class="first-column">Clicks</th>
-              <td>32</td>
-              <td>16</td>
-              <td>10</td>
-              <td>6</td>
-          </tr>
-          <tr>
-              <th scope="row" class="first-column">CTR</th>
-              <td>11.2%</td>
-              <td>13.4%</td>
-              <td>9.4%</td>
-              <td>10.0%</td>
-          </tr>
-      </table>
-    </div> -->
+    <div class="row">
+
+      
+      <section id="ctr-graph">
+        <header>
+          <h2>Clickthrough Rate Comparison</h2>
+          <div id="clickthrough-rate">
+          </div>
+        </header>
+      </section>
+
+    </div>
+
+
   </div>
 
 
