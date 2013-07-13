@@ -27,25 +27,34 @@ h2 {
 
 nav {
   top: 0;
-  padding: 0;
+  padding: 0px 20px;
   position:relative;
-  // height: 60px;
+
+  height: 60px;
+
   background-color: $white;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
   .logo {
     background-image: url("../images/textlogo.png");
     background-size: cover;
-  
-    height: 50px;
+    width: 80px;  
+    height: 36px;
+    float: left;
+    margin: 12px 0px;
   }
 
-  ul,li {
+  ul, li {
     display:inline;
-    padding-left: 20px;
-    vertical-align: middle;
   }
+  
+  .links {
+    height: 60px; 
+    padding: 20px;
+  }
+
   a:link, a:visited {
-      text-decoration: none;
+    text-decoration: none;
+    padding-right: 20px;
   }
 }
 

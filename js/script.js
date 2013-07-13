@@ -12,7 +12,7 @@ $(function() {
   $(".line").peity("line");
 
   var stdHeight = $("#funnel-numbers").height();
-  var noHeaderHeight = stdHeight - 75;
+  var noHeaderHeight = stdHeight - 58;
   $("#total-graph").height(noHeaderHeight);
   $("#visits-clicks").height(noHeaderHeight);
 
