@@ -1,13 +1,8 @@
 @import "bourbon/bourbon";
-// $visual-grid: true;
-// $visual-grid-color: grey;
-// $visual-grid-index: front;
-// $visual-grid-opacity: 0.1;
-
-
+@import "grid-settings";
 @import "neat/neat";
 
-$peach: #e6ddcb;
+$peach: darken(#e6ddcb, 5%);
 $orange: #efb669;
 $gray: #666666;
 $bright-blue:#3b68aa;
@@ -23,23 +18,29 @@ body {
 }
 
 h2 {
-  font-size: 1.25em;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1em;
+  margin: 0 0 20px 0;
+  color: $peach;
 }
 
 nav {
   top: 0;
-  padding: 10px 20px;
+  padding: 0;
   position:relative;
-  height: 50px;
+  // height: 60px;
   background-color: $white;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  .logo {
+    background-image: url("../images/textlogo.png");
+    background-size: cover;
   
-  img {
-    height: 100%;
+    height: 50px;
   }
 
   ul,li {
-    display:inline-block;
+    display:inline;
     padding-left: 20px;
     vertical-align: middle;
   }
@@ -54,32 +55,26 @@ a:link, a:visited {
 
 #container {
   @include outer-container;
-  // @include pad( 20px default );
+  @include pad( 20px default );
   background-color: $white;
   p {
     font-size: .75em;
   }
 }
 
-header {
-  h1 {
-    float: left;
-    margin: 0;
-  }
-  div.downloads {
-    float: right;
-  }
-}
-
 div.row {
   @include row();
-  clear: both;
-  margin-bottom: 20px;
+  padding: 20px 0 0 0;
 }
 
-#numbers {
-  @include span-columns( 6 );
+header {
+  h1 {
+    margin: 0;
+  }
+}
 
+#funnel-numbers {
+  @include span-columns( 6 );
 }
 
 #first-big-number {
@@ -89,9 +84,10 @@ div.row {
 div.big-number {
   @include span-columns( 2 of 6 );
   text-align: center;
-
+  font-size: .9em;
+  // padding: 0 0 20px 0;
   h2 {
-    font-size: 5em;
+    font-size: 6em;
     margin: 0;
   }
 }
@@ -99,17 +95,16 @@ div.big-number {
 section.small-nums {
   @include span-columns( 6 of 6 );
 
+  padding: 10px;
+
   .titleCol {
     @include span-columns (1 of 6);
-    font-weight: normal;
-    text-align: left;
-    vertical-align: middle;
     text-align:middle;
-    padding: .5em;
+    padding: .2em;
   }
-  .col {
+  .numberCol {
     @include span-columns (2 of 6);
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 2em;
     text-align: right;
     vertical-align: middle;
@@ -121,39 +116,62 @@ section.small-nums {
   @include shift(2);
 }
 
-.visits {
-  color: $orange;
+.number {
+  color: #efb669;
+  padding: 0;
 }
 
-.clickthroughs {
-  color: $teal;
+
+
+#total-graph {
+  @include span-columns( 6 );
+  @include omega();
+}
+
+#ctr-graph {
+  @include span-columns( 12 );
+  @include omega();
+}
+
+#ctr-numbers {
+  @include span-columns ( 12 );
+  div.big-number h2 {
+    font-size: 4em;
+  }
 }
 
 #alerts {
-  @include span-columns( 12 );
-  @include pad( 0 default );
-  border-radius: 5px;
-  background-color: $peach;
+  @include span-columns( 6 );
   p {
     margin-top: 0;
+    font-size: 1em;
+  }
+  div.date {
+    font-size: .75em;
+    color: $gray;
+ 
   }
 }
 
-#total-graph, #ctr-graph {
-  @include span-columns( 6 );
-}
+#actions {
+  @include span-columns ( 6 );
+  a.button {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    text-align:center;
+    border-radius: 3px;
+    background-color: $teal; 
+  }
 
-#placeholder {
-  height: 359px;
-}
-
-div.table {
-  @include span-columns( 10 );
-  border:1px #000 solid;
-  th, td {
-    @include span-columns( 2 of 10 );
-    padding: 5px;
+  a:link,a:visited {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.25em;
   }
 }
 
-
+.logofooter {
+  align: center;
+}
